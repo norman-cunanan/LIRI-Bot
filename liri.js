@@ -112,7 +112,7 @@ if (commands === "my-tweets") {
 
 		} else if (fileCommand === "movie-this") {
 
-			var movieItem = item;
+			var movieItem = fileSong;
 			searchMovie(movieItem);
 		}
 	})
