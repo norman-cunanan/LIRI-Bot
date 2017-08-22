@@ -118,6 +118,16 @@ if (commands === "my-tweets") {
 	})
 }
 
+var textAdded = commands + '\n'
+
+fs.appendFile("log.txt", textAdded, function(err) {
+	if (err) {
+		console.log(err);
+	} else {
+		console.log("Command Added!")
+	}
+})
+
 function searchMovie (movieItem) {
 	
 	// var movieItem = item;
