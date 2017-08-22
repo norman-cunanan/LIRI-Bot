@@ -10,7 +10,6 @@ var request = require("request");
 var fs = require('fs');
 
 
-
 /* Following Commands:
 	- my-tweets = show last 20 tweets and when they were created
 	- spotify-this-song <song name here> = show artist, song's name, preview link, and album
@@ -29,14 +28,9 @@ var item = "";
 var blank = process.argv[3];
 
 for (var i = 3; i < nodeArgs.length; i++) {
-
   if (i > 3 && i < nodeArgs.length) {
-
     item = item + " " + nodeArgs[i];
-
-  }
-
-  else {
+  } else {
 
     item += nodeArgs[i];
 
@@ -49,7 +43,7 @@ for (var i = 3; i < nodeArgs.length; i++) {
 
 //Twitter Command
 if (commands === "my-tweets") {
-	console.log("THIS WORKS");
+	// console.log("THIS WORKS");
 	
 	var client = new Twitter ({
 		consumer_key: twitterKey.consumer_key,
@@ -66,7 +60,7 @@ if (commands === "my-tweets") {
   		if (!error) {
     		// console.log(tweets);
     		// console.log(response);
-    		console.log("Twitter works!");
+    		// console.log("Twitter works!");
 
     		for (var i = 0; i < tweets.length; i++) {
     			console.log("Tweet: " + tweets[i].text);
@@ -116,7 +110,7 @@ if (commands === "my-tweets") {
 			var songItem = fileSong;
 			searchSong(songItem);
 
-		} else if (commands === "movie-this") {
+		} else if (fileCommand === "movie-this") {
 
 			var movieItem = item;
 			searchMovie(movieItem);
@@ -156,10 +150,7 @@ function searchSong (songItem) {
   		secret: '8e7da570d7e14ed088354e3e89512298'
 	});
 
-	// console.log(item);
- // 	var songItem = item;
  	console.log("Song Selected: " + songItem);
-
 
 	spotify.search({ type: 'track', query: songItem }, function(err, data) {
   		if (err) {
