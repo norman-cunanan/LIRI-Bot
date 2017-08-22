@@ -118,7 +118,7 @@ if (commands === "my-tweets") {
 	})
 }
 
-var textAdded = commands + '\n'
+var textAdded = commands + " " + item + '\n'
 
 fs.appendFile("log.txt", textAdded, function(err) {
 	if (err) {

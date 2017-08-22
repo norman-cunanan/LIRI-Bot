@@ -1,6 +1,6 @@
-my-tweets
-spotify-this-song
-spotify-this-song
-movie-this
-movie-this
-do-what-it-says
+my-tweets 
+spotify-this-song All The Small Things
+spotify-this-song 
+movie-this The Dark Knight
+movie-this 
+do-what-it-says 
